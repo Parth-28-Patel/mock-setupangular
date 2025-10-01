@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  applyMock: false,
+  applyMock: true,
   envName: 'local',
   withHash: false,
   apiBaseUrl: 'https://jsonplaceholder.typicode.com',

@@ -27,7 +27,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       next: (requestData) => {
         console.log('User List', requestData);
 
-        this.dataSource = requestData;
+        // Extract the data array from the response and update the MatTableDataSource
+        this.dataSource.data = requestData.data || requestData;
       },
       error: (err) => {
         console.error('Error fetching user list', err);
